@@ -1,0 +1,29 @@
+doctype
+html
+	style
+		include ./styles/login.css
+		include ./styles/index.css
+	head
+		title Login
+	body
+		div(class="navBar")
+			ul(class="topnav")
+				li
+					a(href='/login') Login
+				li
+					a(href='/secure') Shop
+				li
+					a(href='/welcome') About
+				li(class="right")
+					a(href="/logout") Logout
+		h1(id="loginH1") Login to Shop!
+		div(class="form-div")
+			form(class="loginForm" method='post')
+				p
+					label(id="usernameLabel" for='username') Username
+				input(class="usernameInput" type='text', name='username', placeholder="Your username..")
+				p
+					label(id="passwordLabel" for='password') Password
+				input(class="passwordInput" type='password', name='password', placeholder="Your password..")
+				div(id="submitDiv")
+					input(type='submit')

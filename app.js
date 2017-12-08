@@ -1,6 +1,7 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
+var path = require('path');
 
 // TODO: Replace this in a config file
 var port = 8999;
@@ -17,14 +18,14 @@ function checkAuth (req, res, next) {
 		res.render('unauthorised', { status: 403 });
 		return;
 	}
-
 	next();
 }
 
 // Requires all the middleware functions
 app.configure(function () {
 
-	app.use(express.static(__dirname + '/views'));
+	app.use(express.static(path.join(__dirname, '/views')));
+	// app.use(express.static(__dirname + '/views'));
 	// Error Handline Middleware => Could make it more robust
 	app.use(function (err, req, res, next) {
 	  console.error(err.stack);
@@ -37,8 +38,8 @@ app.configure(function () {
 	app.use(checkAuth);
 	app.use(app.router);
 	// app.set('view engine', 'html');
-	// app.set('viws', __dirname + '/views');
-	app.set('view engine', 'jade');
+	app.set('view engine', 'pug');
+	// app.set('view engine', 'html');
 	app.set('view options', { layout: false });
 
 });

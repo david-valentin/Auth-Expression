@@ -1,0 +1,28 @@
+html(lang='en')
+	head
+		title Shop Comet
+		style
+			include ./styles/index.css
+			include ./styles/dino.css
+
+	body(id="indexBody")
+		div(class="navBar")
+			ul(class="topnav")
+				li
+					a(href='/login') Login
+				li
+					a(href='/secure') Shop
+				li
+					a(href='/welcome') About
+				li(class="right")
+					a(href="/logout") Logout
+		div(id="titleSloganDiv")
+			h1(class="mainH1") Welcome to Shopzilla
+			p(class="subP") "Get it before the World Ends"
+
+		div(class="dinoDiv")
+			div(class="dino")
+			div(class="eye")
+			div(class="mouth")
+			div(class="ground")
+			div(class="comets")
