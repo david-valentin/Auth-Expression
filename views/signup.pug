@@ -1,0 +1,36 @@
+doctype
+html
+	style
+		include ./styles/login.css
+		include ./styles/index.css
+	head
+		title Signup
+	body
+		div(class="navBar")
+			ul(class="topnav")
+				li
+					a(href='/login') Login
+				li
+					a(href='/secure') Shop
+				li
+					a(href='/about') About
+		h1(id="loginH1") Signup
+			div(class="form-div")
+				form(class="signupForm" method='post')
+					p
+						label(id="emailLabel" for='email') Email
+					input(class="emailInput" type='text', name='email', placeholder="Your email...")
+					p
+						label(id="passwordLabel" for='password') Password
+					input(class="passwordInput" type='password', name='password', placeholder="Your password...")
+					p
+						label(id="hallLabel" for='hall') Hall
+					input(class="hallInput" type='text', name='hall', placeholder="Your hall...")
+					p
+						label(id="roomNumLabel" for='roomNum') Room Number
+					input(class="roomNumInput" type='text', name='roomNum', placeholder="Your Room Number...")
+					p
+						label(id="parkingLotLabel" for='parking_lot') Parking Lot
+					input(class="parkingLotInput" type='text', name='parking_lot', placeholder="Parking Lot...")
+					div(id="submitDiv")
+						input(type='submit')

@@ -3,7 +3,7 @@
 
 
 /* h1 element for the header*/
-#loginH1, #usernameLabel, #passwordLabel {
+#loginH1, #emailLabel, #passwordLabel {
   text-align: center;
 }
 
