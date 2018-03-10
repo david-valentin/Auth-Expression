@@ -132,12 +132,16 @@ module.exports = function (app) {
 		res.redirect('/');
 	});
 
+	//  a get requests that retrieves all the users
+	app.get('/users', (request, response) => {
+	    knex.select().table('users')
+	    .then(function(results){
+            response.send(results);
+        });
+	});
+
+
 	// NEW ROUTES
-	// //  a get requests that retrieves all the users
-	// app.get('/users', (request, response) =>{
-	//     knex.select().table('users')
-	//     .then(function(results){response.send(results)});
-	// });
   //
 	// // a post request that adds new user to the database
 	// app.post('/users/', (request, response) =>{
