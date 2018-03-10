@@ -11,4 +11,14 @@ html
 				li(class="right")
 					a(href="/basket") Basket
 		h1 Hi, #{email}
+		- var list = ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Grille", "Noonis"]
+		- var imgSrc = [""]
+		div(class="restaurantList")
+			each item in list
+				div(class="restaurantImg")
+					img(value=item)
+				
+					
+						
+		
 			
