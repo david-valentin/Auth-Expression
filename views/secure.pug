@@ -7,17 +7,19 @@ html
 		div(class="navBar")
 			ul(class="topnav")
 				li
-					a(href='/login') Login
+					a(href='/logout') Logout
 				li(class="right")
 					a(href="/basket") Basket
 		h1 Hi, #{email}
-		- var list = ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Grille", "Noonis"]
-		- var imgSrc = [""]
+		- var list = ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Noonies"]
+		- var imgs = ["shaffers-logo.png", "greenpeppers-logo.png", "sbaisbai-logo.png", "noonies-logo.png",]
+
 		div(class="restaurantList")
-			each item in list
+			each val, index in ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Grille", "Noonis"]
 				div(class="restaurantImg")
-					img(value=item)
-				
+						a(href="google.com")
+							li=item	
+							img(src= "/assets/" + imgs[index])		
 					
 						
 		
