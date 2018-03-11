@@ -15,12 +15,11 @@ html
 		- var imgs = ["shaffers-logo.png", "greenpeppers-logo.png", "sbaisbai-logo.png", "noonies-logo.png",]
 
 		div(class="restaurantList")
-			each val, index in ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Grille", "Noonis"]
+			each val, index in list
 				div(class="restaurantImg")
-						a(href="google.com")
-							li=item	
-							img(src= "/assets/" + imgs[index])		
-					
+					h1 #{val}
+					img.image(src='/assets/' + imgs[index])
+
 						
 		
 			
