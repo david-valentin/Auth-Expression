@@ -4,23 +4,19 @@ html
 		include ./styles/login.css
 		include ./styles/index.css
 	head
-		title Login
+		title Restaurant Login
 	body
 		div(class="navBar")
 			ul(class="topnav")
 				li
 					a(href='/login') Login
 				li
-					a(href='/secure') Shop
-				li
 					a(href='/signup') Signup
 				li
 					a(href='/about') About
 				li(class="right")
 					a(href="/logout") Logout
-				li(class="right")
-					a(href="/restaurant-login") Restaurant Login
-		h1(id="loginH1") Login to Shop!
+		h1(id="loginH1") Restaurant Login
 			div(class="form-div")
 				form(class="loginForm" method='post')
 					p

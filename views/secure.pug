@@ -1,6 +1,6 @@
 html
 	head
-		title Shop Comet
+		title MiddGrub
 		style
 			include ./styles/index.css
 	body
@@ -12,8 +12,7 @@ html
 					a(href="/basket") Basket
 		h1 Hi, #{email}
 		- var list = ["Shaffers", "Ninos", "Green Peppers", "Sbai Sbai", "Noonies"]
-		- var imgs = ["shaffers-logo.png", "greenpeppers-logo.png", "sbaisbai-logo.png", "noonies-logo.png",]
-
+		- var imgs = ["shaffers-logo.png", "greenpeppers-logo.png", "sbaisbai-logo.png", "noonies-logo.png"]
 		div(class="restaurantList")
 			each val, index in list
 				div(class="restaurantImg")
